@@ -1,0 +1,122 @@
+{
+  "project_info": {
+    "project_number": "572216148925",
+    "firebase_url": "https://fir-33fc6.firebaseio.com",
+    "project_id": "fir-33fc6",
+    "storage_bucket": "fir-33fc6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:572216148925:android:ecf5702c405f481efc88d4",
+        "android_client_info": {
+          "package_name": "com.uylab.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "572216148925-2qrmd1e3f51urc2940enkp1c5lnthf1e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.uylab.firebase",
+            "certificate_hash": "ad9ff21fc2fb938a2f9e7ea76d5539827ccaa1f9"
+          }
+        },
+        {
+          "client_id": "572216148925-pq6h61e92ut4qd0o6kpn67sp30hoq81c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYBXwF6R5wbJdyUH7HjSGgFjcqYQNYR-c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "572216148925-pq6h61e92ut4qd0o6kpn67sp30hoq81c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:572216148925:android:11207419e11aed68fc88d4",
+        "android_client_info": {
+          "package_name": "com.uylab.quiezgame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "572216148925-o9f4s31gpn9flgnhosh3ps1d734tsfm9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.uylab.quiezgame",
+            "certificate_hash": "e38ac7d1cc883d0af61a453e694096830408abc0"
+          }
+        },
+        {
+          "client_id": "572216148925-pq6h61e92ut4qd0o6kpn67sp30hoq81c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYBXwF6R5wbJdyUH7HjSGgFjcqYQNYR-c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "572216148925-pq6h61e92ut4qd0o6kpn67sp30hoq81c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:572216148925:android:7e67122fce88353bfc88d4",
+        "android_client_info": {
+          "package_name": "com.uylab.quizzgamesadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "572216148925-agt6qdtnnhjv55uvh4etn6iua0j9hgik.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.uylab.quizzgamesadmin",
+            "certificate_hash": "b15fdb3bc7ea6f8adf6893b400e9b54c6e752d04"
+          }
+        },
+        {
+          "client_id": "572216148925-pq6h61e92ut4qd0o6kpn67sp30hoq81c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYBXwF6R5wbJdyUH7HjSGgFjcqYQNYR-c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "572216148925-pq6h61e92ut4qd0o6kpn67sp30hoq81c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
