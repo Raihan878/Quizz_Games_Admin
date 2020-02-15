@@ -14,6 +14,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
@@ -78,6 +79,8 @@ public class HomeActivity extends AppCompatActivity implements Question_Adepter.
                     hashMap.put("D_Text",dText);
                     hashMap.put("Currect_Ans",answer);
 
+                    clear();
+
                     firestore.collection(collection_tbls).document(homeBinding.idtextSimple.getText().toString().trim()).set(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
@@ -110,6 +113,7 @@ public class HomeActivity extends AppCompatActivity implements Question_Adepter.
                             }
                         }
                     });
+                    clear();
                 }
             }
         });
@@ -152,8 +156,9 @@ public class HomeActivity extends AppCompatActivity implements Question_Adepter.
                 List<DocumentChange> documentChangeList = queryDocumentSnapshots.getDocumentChanges();
 //                questionModelsList.clear();
 //                questionAdepter.notifyDataSetChanged();
-                for(DocumentChange docChange:documentChangeList){
-                    /*QueryDocumentSnapshot documentReference = docChange.getDocument();
+                getAllData();
+                /*for(DocumentChange docChange:documentChangeList){
+                    QueryDocumentSnapshot documentReference = docChange.getDocument();
                     Question_Model questionmodel = new Question_Model();
                     questionmodel.setId(documentReference.getId());
                     questionmodel.setQuestion(""+documentReference.get("Question"));
@@ -165,7 +170,7 @@ public class HomeActivity extends AppCompatActivity implements Question_Adepter.
 
                     Toast.makeText(HomeActivity.this,"Success",Toast.LENGTH_SHORT).show();
                     questionModelsList.add(questionmodel);
-                    questionAdepter.notifyDataSetChanged();*/
+                    questionAdepter.notifyDataSetChanged();
                     switch (docChange.getType()){
                         case ADDED:
                             QueryDocumentSnapshot documentReference = docChange.getDocument();
@@ -212,7 +217,7 @@ public class HomeActivity extends AppCompatActivity implements Question_Adepter.
                             default:
                                 break;
                     }
-                }
+               }*/
             }
         });
     }
@@ -234,5 +239,30 @@ public class HomeActivity extends AppCompatActivity implements Question_Adepter.
         homeBinding.optionDID.setText(question_model.getdOption());
         homeBinding.currectAns.setText(question_model.getRightAns());
         homeBinding.idtextSimple2.setText(homeBinding.idtextSimple2.getText().toString().trim());
+    }
+    public void getAllData(){
+        questionModelsList.clear();
+        questionAdepter.notifyDataSetChanged();
+        firestore.collection(collection_tbls).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                List<DocumentSnapshot> snapshots = task.getResult().getDocuments();
+                for(DocumentSnapshot documentReference : snapshots){
+                    Question_Model questionmodel = new Question_Model();
+                    questionmodel.setId(documentReference.getId());
+                    questionmodel.setQuestion(""+documentReference.get("Question"));
+                    questionmodel.setaOption(""+documentReference.get("A_Text"));
+                    questionmodel.setbOption(""+documentReference.get("B_Text"));
+                    questionmodel.setcOption(""+documentReference.get("C_Text"));
+                    questionmodel.setdOption(""+documentReference.get("D_Text"));
+                    questionmodel.setRightAns(""+documentReference.get("Currect_Ans"));
+
+                    Toast.makeText(HomeActivity.this,"Success",Toast.LENGTH_SHORT).show();
+                    questionModelsList.add(questionmodel);
+                    questionAdepter.notifyDataSetChanged();
+
+                }
+            }
+        });
     }
 }
